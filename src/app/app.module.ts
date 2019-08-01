@@ -4,12 +4,24 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
 
-import { AppRoutingModule } from './app-routing.module'
+import { AppRoutingModule } from './app-routing.module';
+import { FormationsComponent } from './formations/formations.component';
+import { CompetencesComponent } from './competences/competences.component';
+import { NotFoundComponent } from './not-found.component';
+
+import { ColorSkillPipe } from './competences/color-skill.pipe';
+import { from } from 'rxjs';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    AboutComponent
+    AboutComponent,
+    FormationsComponent,
+    CompetencesComponent,
+    ColorSkillPipe,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

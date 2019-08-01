@@ -1,0 +1,32 @@
+<div *ngIf="!loaded" class="preloader-wrapper active">
+      <div class="spinner-layer spinner-red-only">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+    </div>
+
+<div  *ngIf="loaded" class="section">
+    <h2 class="">Formations et diplômes:</h2>
+
+    <ul class="collection">
+       <li class="collection-item" *ngFor = "let formation of formations">
+            <h4>{{ formation.nom }}</h4>
+
+            <img class="imgEcole responsive-img" src="{{ formation.image }}"  >
+          <p class="flow-text"> <span class="intitule">Etablissement: </span> {{ formation.ecole }} </p>
+          <p class="flow-text" *ngIf="formation.dateDeb.getFullYear() != formation.dateFin.getFullYear()">
+             <span class="intitule" >Années: </span>{{ formation.dateDeb | date:'yyyy'}} - {{ formation.dateFin | date: 'yyyy' }}
+         </p>
+         <p class="flow-text" *ngIf="formation.dateDeb.getFullYear() == formation.dateFin.getFullYear()">
+            <span class="intitule">Année: </span> {{ formation.dateFin| date: 'yyyy' }}
+         </p>
+       </li> 
+       
+    </ul>
+
+  </div>
