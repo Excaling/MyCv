@@ -1,0 +1,25 @@
+<h1 class="center"> Experiences professionnel et projets </h1>
+<div class="divider"></div>
+<div class="container" Height="100%">
+    <div class="row">
+        <div *ngFor="let projet of projets" class="col s6 m4" >
+            <div class="card horizontal" tlBorderCard="red" (click)= "displayProjet(projet)"> <!-- Go mettre une directive ici-->
+              <div class="card-image">
+                <img [src]="projet.image" height="200px" width="600px"/>
+              </div>
+              <div class="card-stacked">
+                <div class="card-content">
+                  <p class="project-name">{{ projet.nom}}</p>
+                  <span *ngFor="let techno of projet.technologies" >
+                    <p>{{ techno }}</p>
+                  </span>
+                  <p><small>{{ projet.annee | date: "yyyy" }}</small></p>
+                  
+                </div>
+              </div>
+            </div>
+        </div>
+       
+    </div>
+    
+  </div>

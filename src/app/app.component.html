@@ -1,20 +1,31 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<nav class="nav-extended">
+<script>
+   
+    
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems, options);
+  });
+  </script>
+<nav class="nav-extends red">
   <div class="nav-wrapper red">
-  <a href="#" class="brand-logo center" >Jonathan PHAM</a>
-  <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+  <a href="" class="brand-logo" >Jonathan PHAM</a>
+  <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><a href="">Presentation</a></li>
+      <li><a href="Formations">Formations et diplômes</a></li>
+      <li><a href="Projets">Expériences professionnel/Projets</a></li>
+      <li><a href="Competences">Compétences</a></li>
 
+    </ul>
+  
   </div>
-  <div class="nav-content red">
-      <ul class="tabs tabs-transparent center">
-        <li class="tab"><a href="">Presentation</a></li>
-        <li class="tab"><a href="Formations">Formations et diplômes</a></li>
-        <li class="tab"><a href="">Expériences professionnel/Projets</a></li>
-        <li class="tab"><a href="Competences">Compétences</a></li>
-
+  <div class="nav-content red" >
+      <ul  class="tabs tabs-transparent">
+        <li class="tab" ><a href="#">Presentation</a></li>
+        <li class="tab" ><a href="Formations">Formations et diplômes</a></li>
+        <li class="tab" ><a href="Projets">Expériences professionnel/Projets</a></li>
+        <li class="tab" ><a href="Competences">Compétences</a></li>
       </ul>
-</div>
-
+    </div>
 </nav>
 
 <router-outlet></router-outlet>

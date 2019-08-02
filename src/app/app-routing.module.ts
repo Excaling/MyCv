@@ -8,10 +8,10 @@ import { NotFoundComponent } from './not-found.component';
 
 const appRoutes: Routes = [
 
-    { path: "Accueil", component: AboutComponent},
+    { path:'', component: AboutComponent },
     { path: "Formations", component: FormationsComponent},
     { path: "Competences", component: CompetencesComponent },
-    { path:'', redirectTo : 'Accueil', pathMatch: 'full' },
+    
     {path:"**", component : NotFoundComponent}
 ]
 
