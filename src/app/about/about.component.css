@@ -1,11 +1,11 @@
 
 img{
-    height: 200px;
-    width: 200px;
+    height: 250px;
+    width: 250px;
 }
 
 .boxImg{
-    margin-top: 10%;
+    margin-top: 5%;
     padding-top: 5px;
     min-height: 100%;
 }

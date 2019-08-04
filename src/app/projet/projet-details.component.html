@@ -1,0 +1,46 @@
+<div *ngIf="projet" class="row">
+    <div class="col s12 m8 offset-m2">
+    <h2 class="header center">{{ projet.nom }}</h2>
+    <div class="card horizontal hoverable">
+      <div class="card-image">
+        <img [src]="projet.image">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <table class="bordered striped">
+            <tbody>
+              <tr>
+                <td>Nom de projet</td>
+                <td><strong>{{ projet.nom }}</strong></td>
+              </tr>
+              <tr>
+                <td>Description</td>
+                <td><strong>{{ projet.context }}</strong></td>
+              </tr>
+              <tr>
+                <td>Technologies: </td>
+                <td>
+                  <span *ngFor="let techno of projet.technologies" class="{{ techno | typeColor }}" ColorTechno>{{ techno }}</span>
+                </td>
+              </tr>
+              <tr *ngIf='projet.lien'>
+                  <td>Lien </td>
+                    <td>
+                        <a href="{{projet.lien}}">{{ projet.lien }}</a>
+                    </td>
+              </tr>
+              <tr>
+                <td>Date</td>
+                <td><em>{{ projet.annee | date:"yyyy" }}</em></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="card-action">
+          <a (click)="goBack()">Retour</a>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    <h4 *ngIf='!projet' class="center">Aucun projet à afficher !</h4>

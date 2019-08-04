@@ -8,4 +8,10 @@
     <h3 class="center">Présentation</h3>
     <p class="center flow-text">{{ description }}</p>
   </div>
- 
+ <div class="divider"></div>
+ <div class="section center">
+   <h3 class="center">Passions</h3>
+   <ul *ngFor='let passion of passions'>
+    <li><p class="flow-text">{{ passion }}</p></li>
+   </ul>
+ </div>

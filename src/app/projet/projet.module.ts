@@ -8,6 +8,7 @@ import { ProjetDetailsComponent} from './projet-details.component';
 
 import { BorderCardDirective } from './border-card.directive';
 import { TypeColorPipe } from './type-color.pipe';
+import { ColorTechno } from './color-techno.directive'
 
 @NgModule(
   {
@@ -19,7 +20,8 @@ import { TypeColorPipe } from './type-color.pipe';
         ProjetComponent,
         ProjetDetailsComponent,
         BorderCardDirective,
-        TypeColorPipe
+        TypeColorPipe,
+        ColorTechno
     ],
 
   }

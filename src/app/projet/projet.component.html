@@ -10,8 +10,8 @@
               <div class="card-stacked">
                 <div class="card-content">
                   <p class="project-name">{{ projet.nom}}</p>
-                  <span *ngFor="let techno of projet.technologies" >
-                    <p>{{ techno }}</p>
+                  <span *ngFor="let techno of projet.technologies"  class="{{techno | typeColor}}">
+                    <p ColorTechno>{{ techno }}</p>
                   </span>
                   <p><small>{{ projet.annee | date: "yyyy" }}</small></p>
                   

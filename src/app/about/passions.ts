@@ -1,0 +1,1 @@
+export const PASSIONS: string[] = ["Informatique","Boxe Anglaise", "Viet Vo Dao"];
